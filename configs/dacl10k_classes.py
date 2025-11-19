@@ -1,0 +1,31 @@
+CLASSES = [
+    'Crack',
+    'ExposedRebars',
+    'Spalling',
+    'Rust',
+    'ACrack',
+    'Rockpocket',
+    'Hollowareas',
+    'Efflorescence',
+    'Cavity',
+    'Wetspot',
+    'Weathering',
+    'Restformwork',
+    'Graffiti',
+]
+
+PALETTE = [
+    [220, 20, 60],
+    [119, 11, 32],
+    [0, 0, 142],
+    [0, 60, 100],
+    [0, 80, 100],
+    [0, 0, 230],
+    [128, 64, 128],
+    [244, 35, 232],
+    [70, 70, 70],
+    [102, 102, 156],
+    [190, 153, 153],
+    [153, 153, 153],
+    [250, 170, 30],
+]
