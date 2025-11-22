@@ -210,3 +210,4 @@ __marimo__/
 # Custom additions below this line
 data
 data_clean
+*.zip
