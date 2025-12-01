@@ -151,7 +151,7 @@ Asimismo, también se graficaron las distribuciones de IoU para cada clase. Las 
 - La Cross-Entropy ponderada produce una mejora pequeña pero medible, especialmente en clases poco frecuentes, aunque no cambia de forma significativa las tendencias generales de desempeño.
 - UNet, a pesar de funcionar razonablemente bien en las clases más comunes, falla en muchos defectos poco frecuentes.
 - SegFormer-B0, aunque es tiene una arquitectura más avanzada, no supera a DeepLabV3+ para este tamaño de dataset y escala del problema.
-- Los resultados son insuficientes por el momento. Se considera como posible pasos siguientes:
+- Los resultados son insuficientes por el momento, aunque son comparables con los citados en bibliografía (mIoU = 0.42). Se considera como posible pasos siguientes:
     - Agrandar el conjuntos de datos
     - Realizar data augmentation sobre el conjunto existente
     - Muestreo basado en parches (patch-based sampling). Esto puede mejorar la performance en clases con máscaras naturalmente más pequeñas (ej: `Crack`)
