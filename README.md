@@ -112,10 +112,10 @@ Los resultados para el conjunto de test son resumidos en la siguiente tabla.
 |DeepLabV3+(WCE)|	0.311|	0.447	|0.774
 |SegFormer-B0|	0.282	|0.403	|0.795
 
-![alt text](image.png)
-![alt text](image-1.png)
-![alt text](image-2.png)
-![alt text](image-3.png)
+![alt text](media/image.png)
+![alt text](media/image-1.png)
+![alt text](media/image-2.png)
+![alt text](media/image-3.png)
 
 Es posible observar el siguiente comportamiento en las curvas de entrenamiento presentadas:
 - DeepLabV3+ es el modelo con mejor performance
@@ -124,8 +124,8 @@ Es posible observar el siguiente comportamiento en las curvas de entrenamiento p
 - Pixel accuracy es la métrica más alta, lo que se debe a la dominancia de la clase `background`.
 
 ## Resultados por clase
-![alt text](image-4.png)
-![alt text](image-5.png)
+![alt text](media/image-4.png)
+![alt text](media/image-5.png)
 
 - Excluyendo `background`, las clases con mejor desempeño son `Graffiti`, `Hollowareas` y `ACrack`, mientras que las de peor desempeño son `Crack`, `Rockpocket`, `Cavity` y `Restformwork`.
 - Para las clases con mejores resultados, DeepLabV3+ supera a los demás modelos, excepto en Graffiti, donde SegFormer obtiene el mejor rendimiento.
@@ -134,10 +134,10 @@ Es posible observar el siguiente comportamiento en las curvas de entrenamiento p
 - UNet nunca tiene el mejor desempeño. Aunque tiene un rendimiento similar en las clases con mejores resultados, no logra producir resultados en varias clases de bajo desempeño (`Crack`, `ExposedRebars`, `Rockpocket`, `Restformwork`).
 
 Asimismo, también se graficaron las distribuciones de IoU para cada clase. Las mismas son presentadas a continuación.
-![alt text](image-6.png)
-![alt text](image-7.png)
-![alt text](image-8.png)
-![alt text](image-9.png)
+![alt text](media/image-6.png)
+![alt text](media/image-7.png)
+![alt text](media/image-8.png)
+![alt text](media/image-9.png)
 
 - Las distribuciones de IoU para las clases con peor rendimiento muestran que casi todas las imágenes de prueba tienen valores entre 0.0 y 0.2, con muy pocos casos por encima de ese rango. Aún así, cabe destacar que DeepLabV3+ logra algunos resultados mejores en la clase `Crack`.
 - Las distribuciones de IoU para las clases con mejor rendimiento también están sesgadas hacia valores bajos, aunque en `Graffiti` se observa un leve sesgo hacia la derecha cuando se excluyen las muestras en el rango 0–0.1.
