@@ -2,7 +2,7 @@
 El objetivo del presente proyecto es realizar fine tuning de distintos modelos de segmentación semántica con niveles crecientes de complejidad, y comparar su desempeño sobre imágenes de defectos en estructuras de hormigón. El foco se centra en en la evaluación de la segmentación semántica de diferentes tipos de daños superficiales (fisuras, corrosión, desprendimientos, entre otros), sin abordar por el momento la cuantificación superficial ni la evaluación estructural, debido a la falta de información de referencia (ground truth) para esa etapa. Este trabajo servirá como prueba de concepto y base metodológica para un desarrollo posterior más amplio en el marco de la tesis de maestría. Los modelos en cuestión son indicados a continuación:
 
 - UNet (CNN)
-- DeepLabV3+ (CNN con ASPP y encoder–decoder refinement) # TODO revisar explicación
+- DeepLabV3+ (CNN con ASPP)
 - SegFormer-B0 (Encoder basado en transformers, decoder tipo MLP)
 
 
@@ -23,7 +23,7 @@ Las clases `'Bearing', 'EJoint', 'Drainage', 'PEquipment', 'JTape', 'WConccor'` 
 ### Elección en base a prioridad en clases solapadas
 Dado que el dataset en cuestón contiene etiquetas multiclase, cada píxel puede tener más de una clase asociada. Con el objetivo de facilitar la utilización de los modelos en cuestión a partir de frameworks conocidos, y debido a que solo el 3.15% de los píxeles presentan más de una clase asociada, se condideró únicamente la clase más importante de todas las presentes para estos casos. El orden de prioridad considerado fue elegido en base a la importancia de los defectos en una estructura de hormigón y es presentado a continuación.
 
-Crack > ExposedRebars > Spalling > Rust > ACrack > Rockpocket > Hollowareas > Efflorescence > Cavity > Wetspot > Weathering > Restformwork > Graffiti
+`Crack > ExposedRebars > Spalling > Rust > ACrack > Rockpocket > Hollowareas > Efflorescence > Cavity > Wetspot > Weathering > Restformwork > Graffiti`
 
 ### Conversión de etiquetas a máscaras
 DACL10k contiene etiquetas en formato JSON. Todas ellas fueron convertidas a máscaras en formato PNG de un solo canal con valores entre 0 y 13, donde 0 corresponde a la clase `background`.
