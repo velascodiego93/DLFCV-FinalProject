@@ -90,7 +90,10 @@ Dado que DeepLabV3+ generaba los mejores resultados, se eligió dicho modelo par
 ## Métricas
 ### Mean Intersection over Union (mIoU)
 IoU es utilizada para cuantificar qué tan bien las máscaras predichas coinciden con las reales en tamaño y ubicación. mIoU corresponde al IoU promedio sobre todas las clases.
-$$IoU = \frac{TP}{TP + FP + FN}$$
+
+$$
+IoU = \frac{TP}{TP + FP + FN}
+$$
 
 ### Macro F1 Score
 Media armónica entre precision y recall, siendo:
