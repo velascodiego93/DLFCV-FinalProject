@@ -156,3 +156,10 @@ Asimismo, también se graficaron las distribuciones de IoU para cada clase. Las 
     - Realizar data augmentation sobre el conjunto existente
     - Muestreo basado en parches (patch-based sampling). Esto puede mejorar la performance en clases con máscaras naturalmente más pequeñas (ej: `Crack`)
     - Utilizar arquitecturas multi-escala, como DeepLabV3+. Es esperable que dichas arquitecturas funcionen mejor para clases con máscaras naturalmente más pequeñas al poder lograr un mejor equilibrio entre detalle y contexto.
+
+# Bibliografía
+[1] L. F. W. F. Bergmann et al., “dacl10k: A Benchmark for Multi-Label Semantic Segmentation of Damage on Concrete Structures” arXiv:2309.00460, 2023.
+
+[2] Z. Wang, Z. Leng, and Z. Zhang, “A Weakly-Supervised Transformer-Based Hybrid Network With Multi-Attention for Pavement Crack Detection” arXiv:2312.04233, 2023.
+
+[3] Y. Liu, J. Yao, X. Lu, R. Xie, and L. Li, “A Multiresolution Benchmark and Comparative Study of Deep Learning Models for Crack Segmentation” SSRN 4370927, 2023.
